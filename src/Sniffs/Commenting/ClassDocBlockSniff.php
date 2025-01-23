@@ -21,7 +21,7 @@ final class ClassDocBlockSniff implements Sniff
      *
      * @var array<string>
      */
-    private array $requiredTags = ['@package', '@author', '@since'];
+    private array $requiredTags = ['@author', '@since'];
 
     /**
      * Returns the token types that this sniff is interested in.
