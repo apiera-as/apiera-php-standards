@@ -1,0 +1,48 @@
+{
+    "name": "apiera/php-standards",
+    "description": "PHP code quality configurations enforcing strict typing and clean code practices",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Apiera\\PhpStandards\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "fredrik-tveraaen",
+            "email": "fredrik.tveraaen@apiera.io"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "phpstan/phpstan": "^2.1",
+        "squizlabs/php_codesniffer": "^3.11",
+        "phpstan/extension-installer": "^1.4",
+        "slevomat/coding-standard": "^8.15"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+    },
+    "scripts": {
+        "cs": "phpcs --standard=./phpcs/ruleset.xml src/",
+        "cs:fix": "phpcbf --standard=./phpcs/ruleset.xml src/",
+        "stan": "phpstan analyse -c ./phpstan/phpstan.neon",
+        "analyse": [
+            "@cs",
+            "@stan"
+        ]
+    },
+    "scripts-descriptions": {
+        "cs": "Check code style",
+        "cs:fix": "Fix code style issues automatically",
+        "stan": "Run PHPStan static analysis",
+        "analyse": "Run all code analysis tools"
+    }
+}

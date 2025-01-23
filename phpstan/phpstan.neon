@@ -1,0 +1,13 @@
+parameters:
+    level: 8
+    paths:
+        - ../src
+
+    treatPhpDocTypesAsCertain: true
+    checkMissingCallableSignature: true
+
+    ignoreErrors:
+        # Add common exclusions here if needed
+
+    excludePaths:
+        # Add common exclude paths here if needed
