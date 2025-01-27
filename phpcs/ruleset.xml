@@ -4,14 +4,8 @@
 
     <config name="installed_paths" value="../../slevomat/coding-standard"/>
 
-    <!-- Exclude patterns -->
-    <exclude-pattern>*/src/Sniffs/*</exclude-pattern>
-
     <!-- Base PSR-12 standard -->
     <rule ref="PSR12"/>
-
-    <!-- Custom rules -->
-    <rule ref="./src/Sniffs/Commenting/ClassDocBlockSniff.php"/>
 
     <!-- Arrays -->
     <rule ref="SlevomatCodingStandard.Arrays.ArrayAccess"/>
